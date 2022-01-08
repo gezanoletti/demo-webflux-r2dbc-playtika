@@ -1,0 +1,12 @@
+spring:
+#  cloud:
+#    config:
+#      enabled: false
+#  config.import: "vault://"
+#  config:
+#    use-legacy-processing: true
+
+  r2dbc:
+    url: r2dbc:postgresql://${embedded.postgresql.host}:${embedded.postgresql.port}/${embedded.postgresql.schema}
+    username: ${embedded.postgresql.user}
+    password: ${embedded.postgresql.password}
